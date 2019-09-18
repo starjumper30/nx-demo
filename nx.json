@@ -1,5 +1,5 @@
 {
-  "npmScope": "oasis",
+  "npmScope": "starjumper30",
   "implicitDependencies": {
     "angular.json": "*",
     "package.json": "*",
@@ -8,11 +8,17 @@
     "nx.json": "*"
   },
   "projects": {
-    "training-scheduler-e2e": {
+    "toh-desktop": {
       "tags": []
     },
-    "training-scheduler": {
+    "toh-desktop-e2e": {
       "tags": []
+    },
+    "toh-feature-shell": {
+      "tags": ["type:feature", "scope:toh"]
+    },
+    "toh-feature-monolith": {
+      "tags": ["type:feature", "scope:toh"]
     }
   }
 }

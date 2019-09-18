@@ -1,39 +1,39 @@
 {
   "version": 1,
   "projects": {
-    "training-scheduler": {
+    "toh-desktop": {
       "projectType": "application",
       "schematics": {
         "@nrwl/angular:component": {
           "style": "scss"
         }
       },
-      "root": "apps/training-scheduler",
-      "sourceRoot": "apps/training-scheduler/src",
-      "prefix": "oasis",
+      "root": "apps/toh-desktop",
+      "sourceRoot": "apps/toh-desktop/src",
+      "prefix": "toh",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/apps/training-scheduler",
-            "index": "apps/training-scheduler/src/index.html",
-            "main": "apps/training-scheduler/src/main.ts",
-            "polyfills": "apps/training-scheduler/src/polyfills.ts",
-            "tsConfig": "apps/training-scheduler/tsconfig.app.json",
+            "outputPath": "dist/apps/toh-desktop",
+            "index": "apps/toh-desktop/src/index.html",
+            "main": "apps/toh-desktop/src/main.ts",
+            "polyfills": "apps/toh-desktop/src/polyfills.ts",
+            "tsConfig": "apps/toh-desktop/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "apps/training-scheduler/src/favicon.ico",
-              "apps/training-scheduler/src/assets"
+              "apps/toh-desktop/src/favicon.ico",
+              "apps/toh-desktop/src/assets"
             ],
-            "styles": ["apps/training-scheduler/src/styles.scss"],
+            "styles": ["apps/toh-desktop/src/styles.scss"],
             "scripts": []
           },
           "configurations": {
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "apps/training-scheduler/src/environments/environment.ts",
-                  "with": "apps/training-scheduler/src/environments/environment.prod.ts"
+                  "replace": "apps/toh-desktop/src/environments/environment.ts",
+                  "with": "apps/toh-desktop/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -63,64 +63,142 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "training-scheduler:build"
+            "browserTarget": "toh-desktop:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "training-scheduler:build:production"
+              "browserTarget": "toh-desktop:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "training-scheduler:build"
+            "browserTarget": "toh-desktop:build"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "apps/training-scheduler/tsconfig.app.json",
-              "apps/training-scheduler/tsconfig.spec.json"
+              "apps/toh-desktop/tsconfig.app.json",
+              "apps/toh-desktop/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/training-scheduler/**"]
+            "exclude": ["**/node_modules/**", "!apps/toh-desktop/**"]
           }
         },
         "test": {
-          "builder": "@nrwl/jest:jest",
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "jestConfig": "apps/training-scheduler/jest.config.js",
-            "tsConfig": "apps/training-scheduler/tsconfig.spec.json",
-            "setupFile": "apps/training-scheduler/src/test-setup.ts"
+            "main": "apps/toh-desktop/src/test.ts",
+            "tsConfig": "apps/toh-desktop/tsconfig.spec.json",
+            "karmaConfig": "apps/toh-desktop/karma.conf.js",
+            "polyfills": "apps/toh-desktop/src/polyfills.ts",
+            "styles": [],
+            "scripts": [],
+            "assets": []
           }
         }
       }
     },
-    "training-scheduler-e2e": {
-      "root": "apps/training-scheduler-e2e",
-      "sourceRoot": "apps/training-scheduler-e2e/src",
+    "toh-desktop-e2e": {
+      "root": "apps/toh-desktop-e2e",
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@nrwl/cypress:cypress",
+          "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "cypressConfig": "apps/training-scheduler-e2e/cypress.json",
-            "tsConfig": "apps/training-scheduler-e2e/tsconfig.e2e.json",
-            "devServerTarget": "training-scheduler:serve"
+            "protractorConfig": "apps/toh-desktop-e2e/protractor.conf.js",
+            "devServerTarget": "toh-desktop:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "training-scheduler:serve:production"
+              "devServerTarget": "toh-desktop:serve:production"
             }
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/training-scheduler-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/training-scheduler-e2e/**"]
+            "tsConfig": "apps/toh-desktop-e2e/tsconfig.e2e.json",
+            "exclude": ["**/node_modules/**", "!apps/toh-desktop-e2e/**"]
           }
+        }
+      }
+    },
+    "toh-feature-shell": {
+      "projectType": "library",
+      "root": "libs/toh/feature-shell",
+      "sourceRoot": "libs/toh/feature-shell/src",
+      "prefix": "toh",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/toh/feature-shell/tsconfig.lib.json",
+            "project": "libs/toh/feature-shell/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/toh/feature-shell/tsconfig.lib.json",
+              "libs/toh/feature-shell/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/toh/feature-shell/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/toh/feature-shell/src/test.ts",
+            "tsConfig": "libs/toh/feature-shell/tsconfig.spec.json",
+            "karmaConfig": "libs/toh/feature-shell/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "toh-feature-monolith": {
+      "projectType": "library",
+      "root": "libs/toh/feature-monolith",
+      "sourceRoot": "libs/toh/feature-monolith/src",
+      "prefix": "starjumper30",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/toh/feature-monolith/tsconfig.lib.json",
+            "project": "libs/toh/feature-monolith/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/toh/feature-monolith/tsconfig.lib.json",
+              "libs/toh/feature-monolith/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/toh/feature-monolith/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/toh/feature-monolith/src/test.ts",
+            "tsConfig": "libs/toh/feature-monolith/tsconfig.spec.json",
+            "karmaConfig": "libs/toh/feature-monolith/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
         }
       }
     }
@@ -130,12 +208,21 @@
   },
   "schematics": {
     "@nrwl/angular:application": {
-      "unitTestRunner": "jest",
-      "e2eTestRunner": "cypress"
+      "unitTestRunner": "karma",
+      "e2eTestRunner": "protractor",
+      "style": "scss"
     },
     "@nrwl/angular:library": {
-      "unitTestRunner": "jest"
+      "unitTestRunner": "karma",
+      "publishable": true,
+      "style": "scss"
+    },
+    "@nrwl/angular:module": {
+      "spec": false
+    },
+    "@nrwl/angular:component": {
+      "style": "scss"
     }
   },
-  "defaultProject": "training-scheduler"
+  "defaultProject": "toh-desktop"
 }

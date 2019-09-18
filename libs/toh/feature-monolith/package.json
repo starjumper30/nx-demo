@@ -1,0 +1,8 @@
+{
+  "name": "@starjumper30/toh-feature-monolith",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^8.2.4",
+    "@angular/core": "^8.2.4"
+  }
+}
