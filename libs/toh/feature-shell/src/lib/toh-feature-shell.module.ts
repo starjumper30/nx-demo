@@ -1,18 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { Route, RouterModule, Routes } from '@angular/router';
-import {
-  AppModule,
-  DashboardComponent,
-  HeroDetailComponent,
-  HeroesComponent
-} from '@starjumper30/toh/feature-monolith';
+import { SharedUiMessagesModule } from '@starjumper30/shared/ui-messages';
+import { AppModule, HeroDetailComponent, HeroesComponent } from '@starjumper30/toh/feature-monolith';
 import { MainComponent } from './main.component';
 
 const childRoutes: Routes = [
-  // TODO lazy-load all these routes
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'dashboard', component: DashboardComponent },
+  {
+    path: 'dashboard',
+    loadChildren: () => import('@starjumper30/toh/feature-dashboard')
+      .then(m => m.TohFeatureDashboardModule)
+  },
+
+  // TODO lazy-load all these routes
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'heroes', component: HeroesComponent }
 ];
@@ -26,6 +27,7 @@ const main: Route = {
 @NgModule({
   imports: [
     AppModule,
+    SharedUiMessagesModule,
     CommonModule,
     RouterModule.forChild([main])
   ],

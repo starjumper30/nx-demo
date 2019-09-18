@@ -9,16 +9,31 @@
   },
   "projects": {
     "toh-desktop": {
-      "tags": []
+      "tags": ["scope:toh"]
     },
     "toh-desktop-e2e": {
-      "tags": []
+      "tags": ["scope:toh"]
     },
     "toh-feature-shell": {
       "tags": ["type:feature", "scope:toh"]
     },
     "toh-feature-monolith": {
       "tags": ["type:feature", "scope:toh"]
+    },
+    "heroes-data-access-heroes": {
+      "tags": ["type:data-access", "scope:heroes"]
+    },
+    "shared-util-logging": {
+      "tags": ["type:util", "scope:shared"]
+    },
+    "shared-ui-messages": {
+      "tags": ["scope:shared", "type:ui"]
+    },
+    "toh-feature-dashboard": {
+      "tags": ["type:feature", "scope:toh"]
+    },
+    "heroes-feature-hero-search": {
+      "tags": ["type:feature", "scope:heroes"]
     }
   }
 }

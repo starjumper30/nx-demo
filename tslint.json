@@ -56,8 +56,28 @@
         "allow": [],
         "depConstraints": [
           {
-            "sourceTag": "*",
-            "onlyDependOnLibsWithTags": ["*"]
+            "sourceTag": "scope:shared",
+            "onlyDependOnLibsWithTags": ["scope:shared"]
+          },
+          {
+            "sourceTag": "scope:heroes",
+            "onlyDependOnLibsWithTags": ["scope:heroes", "scope:shared"]
+          },
+          {
+            "sourceTag": "scope:toh",
+            "onlyDependOnLibsWithTags": ["scope:toh", "scope:heroes", "scope:shared"]
+          },
+          {
+            "sourceTag": "type:data-access",
+            "onlyDependOnLibsWithTags": ["type:util", "type:data-access"]
+          },
+          {
+            "sourceTag": "type:ui",
+            "onlyDependOnLibsWithTags": ["type:util", "type:ui"]
+          },
+          {
+            "sourceTag": "type:util",
+            "onlyDependOnLibsWithTags": ["type:util"]
           }
         ]
       }

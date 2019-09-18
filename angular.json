@@ -201,6 +201,202 @@
           "styleext": "scss"
         }
       }
+    },
+    "heroes-data-access-heroes": {
+      "projectType": "library",
+      "root": "libs/heroes/data-access-heroes",
+      "sourceRoot": "libs/heroes/data-access-heroes/src",
+      "prefix": "starjumper30",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/heroes/data-access-heroes/tsconfig.lib.json",
+            "project": "libs/heroes/data-access-heroes/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/heroes/data-access-heroes/tsconfig.lib.json",
+              "libs/heroes/data-access-heroes/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/heroes/data-access-heroes/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/heroes/data-access-heroes/src/test.ts",
+            "tsConfig": "libs/heroes/data-access-heroes/tsconfig.spec.json",
+            "karmaConfig": "libs/heroes/data-access-heroes/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "shared-util-logging": {
+      "projectType": "library",
+      "root": "libs/shared/util-logging",
+      "sourceRoot": "libs/shared/util-logging/src",
+      "prefix": "starjumper30",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/shared/util-logging/tsconfig.lib.json",
+            "project": "libs/shared/util-logging/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/util-logging/tsconfig.lib.json",
+              "libs/shared/util-logging/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/util-logging/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/shared/util-logging/src/test.ts",
+            "tsConfig": "libs/shared/util-logging/tsconfig.spec.json",
+            "karmaConfig": "libs/shared/util-logging/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "shared-ui-messages": {
+      "projectType": "library",
+      "root": "libs/shared/ui-messages",
+      "sourceRoot": "libs/shared/ui-messages/src",
+      "prefix": "starjumper30",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/shared/ui-messages/tsconfig.lib.json",
+            "project": "libs/shared/ui-messages/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/ui-messages/tsconfig.lib.json",
+              "libs/shared/ui-messages/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/shared/ui-messages/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/shared/ui-messages/src/test.ts",
+            "tsConfig": "libs/shared/ui-messages/tsconfig.spec.json",
+            "karmaConfig": "libs/shared/ui-messages/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "toh-feature-dashboard": {
+      "projectType": "library",
+      "root": "libs/toh/feature-dashboard",
+      "sourceRoot": "libs/toh/feature-dashboard/src",
+      "prefix": "starjumper30",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/toh/feature-dashboard/tsconfig.lib.json",
+            "project": "libs/toh/feature-dashboard/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/toh/feature-dashboard/tsconfig.lib.json",
+              "libs/toh/feature-dashboard/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/toh/feature-dashboard/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/toh/feature-dashboard/src/test.ts",
+            "tsConfig": "libs/toh/feature-dashboard/tsconfig.spec.json",
+            "karmaConfig": "libs/toh/feature-dashboard/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "heroes-feature-hero-search": {
+      "projectType": "library",
+      "root": "libs/heroes/feature-hero-search",
+      "sourceRoot": "libs/heroes/feature-hero-search/src",
+      "prefix": "heroes",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/heroes/feature-hero-search/tsconfig.lib.json",
+            "project": "libs/heroes/feature-hero-search/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/heroes/feature-hero-search/tsconfig.lib.json",
+              "libs/heroes/feature-hero-search/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/heroes/feature-hero-search/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/heroes/feature-hero-search/src/test.ts",
+            "tsConfig": "libs/heroes/feature-hero-search/tsconfig.spec.json",
+            "karmaConfig": "libs/heroes/feature-hero-search/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
     }
   },
   "cli": {

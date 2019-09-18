@@ -21,6 +21,21 @@
       ],
       "@starjumper30/toh/feature-monolith": [
         "libs/toh/feature-monolith/src/index.ts"
+      ],
+      "@starjumper30/heroes/data-access-heroes": [
+        "libs/heroes/data-access-heroes/src/index.ts"
+      ],
+      "@starjumper30/shared/util-logging": [
+        "libs/shared/util-logging/src/index.ts"
+      ],
+      "@starjumper30/shared/ui-messages": [
+        "libs/shared/ui-messages/src/index.ts"
+      ],
+      "@starjumper30/toh/feature-dashboard": [
+        "libs/toh/feature-dashboard/src/index.ts"
+      ],
+      "@starjumper30/heroes/feature-hero-search": [
+        "libs/heroes/feature-hero-search/src/index.ts"
       ]
     }
   },
