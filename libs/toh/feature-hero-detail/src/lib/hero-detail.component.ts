@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { Hero, HeroService } from '@starjumper30/heroes/data-access-heroes';
 
 @Component({
-  selector: 'app-hero-detail',
+  selector: 'toh-hero-detail',
   templateUrl: './hero-detail.component.html',
   styleUrls: [ './hero-detail.component.css' ]
 })

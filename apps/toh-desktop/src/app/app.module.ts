@@ -2,9 +2,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Route, RouterModule } from '@angular/router';
-import { InMemoryDataService } from '@starjumper30/toh/feature-monolith';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { AppComponent } from './app.component';
+import { InMemoryDataService } from './in-memory-data.service';
 
 const mainRoute: Route = {
   path: '',

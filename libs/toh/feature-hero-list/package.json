@@ -1,5 +1,5 @@
 {
-  "name": "@starjumper30/toh-feature-monolith",
+  "name": "@starjumper30/toh-feature-hero-list",
   "version": "0.0.1",
   "peerDependencies": {
     "@angular/common": "^8.2.4",

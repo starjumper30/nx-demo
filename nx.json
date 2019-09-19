@@ -17,9 +17,6 @@
     "toh-feature-shell": {
       "tags": ["type:feature", "scope:toh"]
     },
-    "toh-feature-monolith": {
-      "tags": ["type:feature", "scope:toh"]
-    },
     "heroes-data-access-heroes": {
       "tags": ["type:data-access", "scope:heroes"]
     },
@@ -34,6 +31,12 @@
     },
     "heroes-feature-hero-search": {
       "tags": ["type:feature", "scope:heroes"]
+    },
+    "toh-feature-hero-list": {
+      "tags": ["scope:toh", "type:feature"]
+    },
+    "toh-feature-hero-detail": {
+      "tags": ["scope:toh", "type:feature"]
     }
   }
 }

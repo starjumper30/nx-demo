@@ -10,7 +10,7 @@ module.exports = function(config) {
     ...baseConfig,
     coverageIstanbulReporter: {
       ...baseConfig.coverageIstanbulReporter,
-      dir: join(__dirname, '../../../coverage/libs/toh/feature-monolith')
+      dir: join(__dirname, '../../../coverage/libs/toh/feature-hero-list')
     }
   });
 };

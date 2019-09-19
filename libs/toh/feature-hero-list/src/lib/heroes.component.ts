@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Hero, HeroService } from '@starjumper30/heroes/data-access-heroes';
 
 @Component({
-  selector: 'app-heroes',
+  selector: 'toh-heroes',
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css']
 })

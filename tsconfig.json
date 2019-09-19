@@ -19,9 +19,6 @@
       "@starjumper30/toh/feature-shell": [
         "libs/toh/feature-shell/src/index.ts"
       ],
-      "@starjumper30/toh/feature-monolith": [
-        "libs/toh/feature-monolith/src/index.ts"
-      ],
       "@starjumper30/heroes/data-access-heroes": [
         "libs/heroes/data-access-heroes/src/index.ts"
       ],
@@ -36,6 +33,12 @@
       ],
       "@starjumper30/heroes/feature-hero-search": [
         "libs/heroes/feature-hero-search/src/index.ts"
+      ],
+      "@starjumper30/toh/feature-hero-list": [
+        "libs/toh/feature-hero-list/src/index.ts"
+      ],
+      "@starjumper30/toh/feature-hero-detail": [
+        "libs/toh/feature-hero-detail/src/index.ts"
       ]
     }
   },

@@ -164,44 +164,6 @@
         }
       }
     },
-    "toh-feature-monolith": {
-      "projectType": "library",
-      "root": "libs/toh/feature-monolith",
-      "sourceRoot": "libs/toh/feature-monolith/src",
-      "prefix": "starjumper30",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-ng-packagr:build",
-          "options": {
-            "tsConfig": "libs/toh/feature-monolith/tsconfig.lib.json",
-            "project": "libs/toh/feature-monolith/ng-package.json"
-          }
-        },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
-          "options": {
-            "tsConfig": [
-              "libs/toh/feature-monolith/tsconfig.lib.json",
-              "libs/toh/feature-monolith/tsconfig.spec.json"
-            ],
-            "exclude": ["**/node_modules/**", "!libs/toh/feature-monolith/**"]
-          }
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "libs/toh/feature-monolith/src/test.ts",
-            "tsConfig": "libs/toh/feature-monolith/tsconfig.spec.json",
-            "karmaConfig": "libs/toh/feature-monolith/karma.conf.js"
-          }
-        }
-      },
-      "schematics": {
-        "@nrwl/angular:component": {
-          "styleext": "scss"
-        }
-      }
-    },
     "heroes-data-access-heroes": {
       "projectType": "library",
       "root": "libs/heroes/data-access-heroes",
@@ -389,6 +351,85 @@
             "main": "libs/heroes/feature-hero-search/src/test.ts",
             "tsConfig": "libs/heroes/feature-hero-search/tsconfig.spec.json",
             "karmaConfig": "libs/heroes/feature-hero-search/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "toh-feature-hero-list": {
+      "projectType": "library",
+      "root": "libs/toh/feature-hero-list",
+      "sourceRoot": "libs/toh/feature-hero-list/src",
+      "prefix": "starjumper30",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/toh/feature-hero-list/tsconfig.lib.json",
+            "project": "libs/toh/feature-hero-list/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/toh/feature-hero-list/tsconfig.lib.json",
+              "libs/toh/feature-hero-list/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!libs/toh/feature-hero-list/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/toh/feature-hero-list/src/test.ts",
+            "tsConfig": "libs/toh/feature-hero-list/tsconfig.spec.json",
+            "karmaConfig": "libs/toh/feature-hero-list/karma.conf.js"
+          }
+        }
+      },
+      "schematics": {
+        "@nrwl/angular:component": {
+          "styleext": "scss"
+        }
+      }
+    },
+    "toh-feature-hero-detail": {
+      "projectType": "library",
+      "root": "libs/toh/feature-hero-detail",
+      "sourceRoot": "libs/toh/feature-hero-detail/src",
+      "prefix": "starjumper30",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "libs/toh/feature-hero-detail/tsconfig.lib.json",
+            "project": "libs/toh/feature-hero-detail/ng-package.json"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/toh/feature-hero-detail/tsconfig.lib.json",
+              "libs/toh/feature-hero-detail/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/toh/feature-hero-detail/**"
+            ]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "libs/toh/feature-hero-detail/src/test.ts",
+            "tsConfig": "libs/toh/feature-hero-detail/tsconfig.spec.json",
+            "karmaConfig": "libs/toh/feature-hero-detail/karma.conf.js"
           }
         }
       },
