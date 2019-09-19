@@ -1,11 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { RouterTestingModule } from '@angular/router/testing';
-import { HeroService } from '@starjumper30/heroes/data-access-heroes';
+import { Hero, HeroService } from '@starjumper30/heroes/data-access-heroes';
 import { HeroSearchComponent } from '@starjumper30/heroes/feature-hero-search';
-import { HEROES } from '@starjumper30/toh/feature-monolith';
 import { of } from 'rxjs';
-
 import { DashboardComponent } from './dashboard.component';
 
 describe('DashboardComponent', () => {
@@ -13,10 +10,24 @@ describe('DashboardComponent', () => {
   let fixture: ComponentFixture<DashboardComponent>;
   let heroService;
   let getHeroesSpy;
+  let heroes: Hero[];
 
   beforeEach(async(() => {
+    heroes = [
+      { id: 11, name: 'Dr Nice' },
+      { id: 12, name: 'Narco' },
+      { id: 13, name: 'Bombasto' },
+      { id: 14, name: 'Celeritas' },
+      { id: 15, name: 'Magneta' },
+      { id: 16, name: 'RubberMan' },
+      { id: 17, name: 'Dynama' },
+      { id: 18, name: 'Dr IQ' },
+      { id: 19, name: 'Magma' },
+      { id: 20, name: 'Tornado' }
+    ];
+
     heroService = jasmine.createSpyObj('HeroService', ['getHeroes']);
-    getHeroesSpy = heroService.getHeroes.and.returnValue( of(HEROES) );
+    getHeroesSpy = heroService.getHeroes.and.returnValue( of(heroes) );
     TestBed.configureTestingModule({
       declarations: [
         DashboardComponent,
