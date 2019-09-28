@@ -1,5 +1,5 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Hero } from './hero';
+import { Hero } from '../../../../libs/toh/feature-monolith/src/lib/hero';
 import { Injectable } from '@angular/core';
 
 @Injectable({
