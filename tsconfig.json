@@ -21,6 +21,9 @@
       ],
       "@starjumper30/toh/feature-monolith": [
         "libs/toh/feature-monolith/src/index.ts"
+      ],
+      "@starjumper30/heroes/data-access-heroes": [
+        "libs/heroes/data-access-heroes/src/index.ts"
       ]
     }
   },

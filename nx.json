@@ -19,6 +19,9 @@
     },
     "toh-feature-monolith": {
       "tags": ["type:feature", "scope:toh"]
+    },
+    "heroes-data-access-heroes": {
+      "tags": ["scope:heroes", "type:data-access"]
     }
   }
 }

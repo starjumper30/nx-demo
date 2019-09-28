@@ -4,7 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 
-import { Hero } from './hero';
+import { Hero } from '../../../../heroes/data-access-heroes/src/lib/hero';
 import { MessageService } from './message.service';
 
 
